@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ics45c/projects/hashit/src/commandParser.cpp
+commandParser.h
+/home/ics45c/projects/hashit/src/commandParser.h
+iostream
+-
+
+/home/ics45c/projects/hashit/src/commandParser.h
+string
+-
+
