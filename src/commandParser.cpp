@@ -1,103 +1,112 @@
 #include "commandParser.h"
+#include "parsingUtil.h"
 #include <iostream>
 
-void commandChecker(std::string str) {
+void commandChecker(std::string rawStr, bool &isDebugMode) {
 
-	//std::cout << "COMMAND CHECKER IS CALLED!\n"; //TESTING PURPOSE
-
-	int start = 0;
-	int currentLocation = 0;
-	int numberOfEmptyChar = 0;
-	
 	std::string command = "";
+	std::string firstWord = getFirstWord(rawStr);
 
-	if(hasEmptyCharOffset(str)) { // NOT Command only
-		// std::cout << "Number of Empty Char : " << countEmptyChars(str) << std::endl; // TESTING PURPOSE
-		numberOfEmptyChar = countEmptyChars(str);
-		//std::cout << getFirstWord(str); // TESTING PURPOSE
-		std::string firstWord = getFirstWord(str);
+	if(isDebugMode) {
 
-		// Figure out special case: LOGIN, DEBUG
-		if(firstWord == "LOGIN") {
-			if(numberOfEmptyChar == 2)
-				singleCommandTwoParam(str);
-			else
-				doubleCommandOnly(str);
-		}else if(firstWord == "DEBUG") {
-			int emptyCharOffset = str.find(" ",0);
-			int start = emptyCharOffset + 1;
-			std::string secondCommand = str.substr(start); // WORKS!
-			if(secondCommand == "ON") {
-				// functionality here [CODE REQUIRE]
-			}else{
-				// functionlaity here [CODE REQUIRE]
-			}
-		}else if( (firstWord == "BUCKET") || (firstWord=="LOAD") ) {
-			doubleCommandOnly(str);	
-		}else if(firstWord == "MAX"){
-			tripleCommandOnly(str);
+		if(firstWord == "DEBUG") {
+			command = rawStr;
+			debugModeSwitch(command, isDebugMode);
+		}else if(isDebugCommand(rawStr)) {
+			command = rawStr;
+			debugCommandExecuter(command);
+		}else if(checkValidBasicCommand(firstWord) && checkValidNumberOfArguments(rawStr, firstWord)) {
+			std::cout << "BASIC COMMAND\n";
 		} else {
-			switch(numberOfEmptyChar) {
-				case 2:
-					singleCommandTwoParam(str);
-					break;
-				case 1:
-					singleCommandOneParam(str);
-					break;
-				default: 
-					break;
-			}
+			std::cout << "INVALID\n";
 		}
 
+	}else {
+		if(checkValidBasicCommand(firstWord) && checkValidNumberOfArguments(rawStr, firstWord)) {
+			if(firstWord == "DEBUG") {
+				command = rawStr;
+				debugModeSwitch(command, isDebugMode);
+			}
+		}else {
+			std::cout << "INVALID\n";
+		}
 	}
-	else { // Command only
-		singleCommandOnly(str);
+
+}
+
+void debugModeSwitch(std::string debugCommand, bool &isDebugMode) {
+	if(debugCommand == "DEBUG ON") {
+		if(isDebugMode) {
+			std::cout << "ON ALREADY\n";
+		} else {
+			std::cout << "ON NOW\n";
+			isDebugMode = true;
+		}
+	}else if(debugCommand == "DEBUG OFF") {
+		if(isDebugMode) {
+			std::cout << "OFF NOW\n";
+			isDebugMode = false;
+		} else {
+			std::cout << "OFF ALREADY\n";
+		}
+	}else {
+		std::cout << "INVALID FROM \n";
+	}
+}
+
+void debugCommandExecuter(std::string command) {
+	if(command == "LOGIN COUNT") {
+		std::cout << "LOGIN COUNTED!\n";
+	} else if(command == "BUCKET COUNT") {
+		std::cout << "BUCKET COUNTED!\n";
+	} else if(command == "LOAD FACTOR") {
+		std::cout << "LOAD FACTORED!\n";
+	} else if(command == "MAX BUCKET SIZE") {
+		std::cout << "MAX BUCKET SIZED!\n";
+	} else {
+		std::cout << "Never happen in my bugless program.\n";
+	}
+}
+
+bool checkValidBasicCommand(std::string firstWord) {
+	bool flag = false;
+	if(firstWord == "CREATE" ||
+		firstWord == "LOGIN" ||
+		firstWord == "REMOVE" ||
+		firstWord == "CLEAR" ||
+		firstWord == "QUIT" ||
+		firstWord == "DEBUG") 
+		flag = true;
+
+	return flag;
+}
+
+
+/*
+bool checkValidNumberOfArguments(std:: string firstWord) {
+
+	if(firstWord == "LOGIN") {
+		if( countEmptyChars(firstWord) == 2 )
+		{
+			// 
+		} else if( countEmptyChars(firstWord == 1) ) {
+
+		} 
+	} else if(firstWord == "DEBUG") {
+
+	} else if(firstWord == "BUCKET" || firstWord == "LOAD") {
+
+	} else if(firstWord == "MAX") {
 
 	}
-
 }
-
-std::string getFirstWord(std::string str) {
-
-	int emptyCharOffset = str.find(" ", 0);
-	return str.substr(0, emptyCharOffset);
-
-}
+*/
 
 
-// Checks str contains empty char or not.
-bool hasEmptyCharOffset(std::string str) {
 
-	int emptyCharOffset = str.find(" ", 0);
-
-	if(emptyCharOffset > 0) 
-		return true;
-	else
-		return false;
-
-}
-
-// WARNING: last empty char is not considered.
-int countEmptyChars(std::string str) {
-
-	int counter = 0;
-	int start = 0;
-	int emptyCharOffset = 0;
-	
-	do {
-		emptyCharOffset = str.find(" ",start);
-		if(emptyCharOffset != -1)
-			counter++;
-			start = emptyCharOffset + 1;
-	}while(emptyCharOffset != -1);
-
-	return counter;
-}
 
 void singleCommandOnly(std::string str) {
-
 	std::cout << "SINGLE COMMAND ONLY" << std::endl; // TESTING PURPOSE
-
 }
 
 void doubleCommandOnly(std::string str) {

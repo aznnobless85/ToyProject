@@ -1,6 +1,11 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/a.out.dir/src/commandProcess.cpp.o"
+  "CMakeFiles/a.out.dir/src/ArrayList.cpp.o"
   "CMakeFiles/a.out.dir/src/main.cpp.o"
+  "CMakeFiles/a.out.dir/src/commandProcessor.cpp.o"
   "CMakeFiles/a.out.dir/src/commandParser.cpp.o"
+  "CMakeFiles/a.out.dir/src/HashMap.cpp.o"
+  "CMakeFiles/a.out.dir/src/parsingUtil.cpp.o"
   "a.out.pdb"
   "a.out"
 )

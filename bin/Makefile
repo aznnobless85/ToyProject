@@ -124,6 +124,60 @@ a.out.test/fast:
 	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/build
 .PHONY : a.out.test/fast
 
+src/ArrayList.o: src/ArrayList.cpp.o
+.PHONY : src/ArrayList.o
+
+# target to build an object file
+src/ArrayList.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/ArrayList.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o
+.PHONY : src/ArrayList.cpp.o
+
+src/ArrayList.i: src/ArrayList.cpp.i
+.PHONY : src/ArrayList.i
+
+# target to preprocess a source file
+src/ArrayList.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/ArrayList.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/ArrayList.cpp.i
+.PHONY : src/ArrayList.cpp.i
+
+src/ArrayList.s: src/ArrayList.cpp.s
+.PHONY : src/ArrayList.s
+
+# target to generate assembly for a file
+src/ArrayList.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/ArrayList.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/ArrayList.cpp.s
+.PHONY : src/ArrayList.cpp.s
+
+src/HashMap.o: src/HashMap.cpp.o
+.PHONY : src/HashMap.o
+
+# target to build an object file
+src/HashMap.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/HashMap.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/HashMap.cpp.o
+.PHONY : src/HashMap.cpp.o
+
+src/HashMap.i: src/HashMap.cpp.i
+.PHONY : src/HashMap.i
+
+# target to preprocess a source file
+src/HashMap.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/HashMap.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/HashMap.cpp.i
+.PHONY : src/HashMap.cpp.i
+
+src/HashMap.s: src/HashMap.cpp.s
+.PHONY : src/HashMap.s
+
+# target to generate assembly for a file
+src/HashMap.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/HashMap.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/HashMap.cpp.s
+.PHONY : src/HashMap.cpp.s
+
 src/commandParser.o: src/commandParser.cpp.o
 .PHONY : src/commandParser.o
 
@@ -151,6 +205,60 @@ src/commandParser.cpp.s:
 	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandParser.cpp.s
 .PHONY : src/commandParser.cpp.s
 
+src/commandProcess.o: src/commandProcess.cpp.o
+.PHONY : src/commandProcess.o
+
+# target to build an object file
+src/commandProcess.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcess.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o
+.PHONY : src/commandProcess.cpp.o
+
+src/commandProcess.i: src/commandProcess.cpp.i
+.PHONY : src/commandProcess.i
+
+# target to preprocess a source file
+src/commandProcess.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcess.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.i
+.PHONY : src/commandProcess.cpp.i
+
+src/commandProcess.s: src/commandProcess.cpp.s
+.PHONY : src/commandProcess.s
+
+# target to generate assembly for a file
+src/commandProcess.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcess.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.s
+.PHONY : src/commandProcess.cpp.s
+
+src/commandProcessor.o: src/commandProcessor.cpp.o
+.PHONY : src/commandProcessor.o
+
+# target to build an object file
+src/commandProcessor.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o
+.PHONY : src/commandProcessor.cpp.o
+
+src/commandProcessor.i: src/commandProcessor.cpp.i
+.PHONY : src/commandProcessor.i
+
+# target to preprocess a source file
+src/commandProcessor.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.i
+.PHONY : src/commandProcessor.cpp.i
+
+src/commandProcessor.s: src/commandProcessor.cpp.s
+.PHONY : src/commandProcessor.s
+
+# target to generate assembly for a file
+src/commandProcessor.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.s
+.PHONY : src/commandProcessor.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -174,6 +282,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/parsingUtil.o: src/parsingUtil.cpp.o
+.PHONY : src/parsingUtil.o
+
+# target to build an object file
+src/parsingUtil.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/parsingUtil.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o
+.PHONY : src/parsingUtil.cpp.o
+
+src/parsingUtil.i: src/parsingUtil.cpp.i
+.PHONY : src/parsingUtil.i
+
+# target to preprocess a source file
+src/parsingUtil.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/parsingUtil.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.i
+.PHONY : src/parsingUtil.cpp.i
+
+src/parsingUtil.s: src/parsingUtil.cpp.s
+.PHONY : src/parsingUtil.s
+
+# target to generate assembly for a file
+src/parsingUtil.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/parsingUtil.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.s
+.PHONY : src/parsingUtil.cpp.s
 
 test/TestHashMap.o: test/TestHashMap.cpp.o
 .PHONY : test/TestHashMap.o
@@ -233,12 +368,27 @@ help:
 	@echo "... a.out.test"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/ArrayList.o"
+	@echo "... src/ArrayList.i"
+	@echo "... src/ArrayList.s"
+	@echo "... src/HashMap.o"
+	@echo "... src/HashMap.i"
+	@echo "... src/HashMap.s"
 	@echo "... src/commandParser.o"
 	@echo "... src/commandParser.i"
 	@echo "... src/commandParser.s"
+	@echo "... src/commandProcess.o"
+	@echo "... src/commandProcess.i"
+	@echo "... src/commandProcess.s"
+	@echo "... src/commandProcessor.o"
+	@echo "... src/commandProcessor.i"
+	@echo "... src/commandProcessor.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/parsingUtil.o"
+	@echo "... src/parsingUtil.i"
+	@echo "... src/parsingUtil.s"
 	@echo "... test/TestHashMap.o"
 	@echo "... test/TestHashMap.i"
 	@echo "... test/TestHashMap.s"

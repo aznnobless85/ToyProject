@@ -2,20 +2,21 @@
 #define COMMANDPARSER_H
 
 #include <string>
+#include "parsingUtil.h"
 
-void commandChecker(std::string str);
-bool hasEmptyCharOffset(std::string str);
-int countEmptyChars(std::string str);
-std::string getFirstWord(std::string str);
-//bool firstWordCheck(std::string str);
-//bool secondWordCheck(std::string str, int startPosition);
+void commandChecker(std::string str, bool &isDebugMode);
 
+bool checkValidBasicCommand(std::string firstWord);
+//bool checkValidFullCommand(std::string firstWord);
 
+void debugModeSwitch(std::string command, bool &isDebugMode);
+void debugCommandExecuter(std::string command);
+
+///
 void singleCommandOnly(std::string str);
 void doubleCommandOnly(std::string str);
 void tripleCommandOnly(std::string str);
 void singleCommandOneParam(std::string str);
-
 void singleCommandTwoParam(std::string str);
 
 

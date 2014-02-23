@@ -9,6 +9,9 @@
 #include <functional>
 #include <string>
 
+#include "ArrayList.hpp"
+
+
 class HashMap
 {
 public:
@@ -89,6 +92,24 @@ public:
     // HashMap's largest bucket.
     unsigned int maxBucketSize() const;
 
+    void showAllLinkedList(const std::string& key){
+        unsigned int index = hasher(key) % bucketCount() ;
+        Node* pTempNode = arrList.at(index);
+
+        while(pTempNode->next != NULL) {
+            std::cout << pTempNode->key << " " << pTempNode->value << " \n";
+            pTempNode = pTempNode->next;
+        }
+        std::cout << pTempNode->key << " " << pTempNode->value << " \n";
+    }
+
+    void increaseNumberOfAccount() {
+        numberOfAccount++;
+    }
+
+    void decreaseNumberOfAccount() {
+        numberOfAccount--;
+    }
 
 private:
     // This structure describes the nodes that make up the linked lists in
@@ -100,14 +121,26 @@ private:
         Node* next;
     };
 
-
+    struct MyHash {
+        unsigned int operator()(std::string const& str) const {
+            unsigned int sum = 0;
+            for(unsigned int i = 0; i < str.length();i++) 
+            {
+                char ch = str.at(i);
+                sum += ch;
+            }
+            return sum;
+        }
+    };
     // Store the hash function (either the default hash function or the one
     // passed to the constructor as a parameter) in this member variable.
     // When you want to hash a key, call this member variable (i.e., follow
     // it with parentheses and a parameter) just like you would any other
     // function.
     HashFunction hasher;
-
+    ArrayList<Node> arrList;
+    unsigned int numberOfAccount;
+    
 
     // You will no doubt need to add at least a few more private members
 };

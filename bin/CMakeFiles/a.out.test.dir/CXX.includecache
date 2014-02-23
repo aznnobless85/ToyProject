@@ -6,13 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/ics45c/projects/hashit/src/commandParser.cpp
-commandParser.h
-/home/ics45c/projects/hashit/src/commandParser.h
+/home/ics45c/projects/hashit/src/ArrayList.cpp
+ArrayList.hpp
+/home/ics45c/projects/hashit/src/ArrayList.hpp
 iostream
 -
 
-/home/ics45c/projects/hashit/src/commandParser.h
+/home/ics45c/projects/hashit/src/ArrayList.hpp
 string
 -
+ArrayList.cpp
+/home/ics45c/projects/hashit/src/ArrayList.cpp
+
+/home/ics45c/projects/hashit/src/HashMap.cpp
+HashMap.hpp
+/home/ics45c/projects/hashit/src/HashMap.hpp
+iostream
+-
+
+/home/ics45c/projects/hashit/src/HashMap.hpp
+functional
+-
+string
+-
+ArrayList.hpp
+/home/ics45c/projects/hashit/src/ArrayList.hpp
 
