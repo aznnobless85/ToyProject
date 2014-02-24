@@ -78,14 +78,21 @@ T* ArrayList<T>::at(unsigned int index) const
 }
 
 template<class T>
-void ArrayList<T>::increaseCapacity() {
-    int newCap = cap * 2 + 1;
-    T** newItems = new T*[newCap];
-    arrayCopy(newItems, items, cap);
-    cap = newCap;
-    
-    delete[] items;
-    items = newItems;
+template<class H>
+void ArrayList<T>::increaseCapacity(H& hasher) {
+
+   
+
+    // for(unsigned int i = 0; i < newCap; i++) {
+    //     if(newItems[i] == NULL) {
+    //        // INTENTIONALLY DO NOTHING FOR DEBUG  
+    //        // std::cout << "NULL CHECK" << i << "\n";
+    //     }
+    //     else{
+    //         std::string key = newItems[i]->key;
+    //         std::cout << "NEW KEY " << i << " : " << key << std::endl;
+    //     }
+    // }
 }
 
 

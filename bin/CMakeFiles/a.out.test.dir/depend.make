@@ -9,13 +9,16 @@ CMakeFiles/a.out.test.dir/src/HashMap.cpp.o: ../src/ArrayList.hpp
 CMakeFiles/a.out.test.dir/src/HashMap.cpp.o: ../src/HashMap.cpp
 CMakeFiles/a.out.test.dir/src/HashMap.cpp.o: ../src/HashMap.hpp
 
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o: ../src/commandParser.cpp
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o: ../src/commandParser.h
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o: ../src/parsingUtil.h
-
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o: ../src/commandProcess.cpp
-
+CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/ArrayList.cpp
+CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/ArrayList.hpp
+CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/HashMap.hpp
 CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/commandProcessor.cpp
+CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/commandProcessor.hpp
+CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/commandValidation.h
+CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/parsingUtil.h
+
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o: ../src/commandValidation.cpp
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o: ../src/parsingUtil.h
 
 CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o: ../src/parsingUtil.cpp
 CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o: ../src/parsingUtil.h

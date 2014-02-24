@@ -34,7 +34,19 @@ public:
     	sz--;
     }
 
-    void increaseCapacity();
+    void setItems(T** newItems, unsigned int newCap) {
+    	delete items;
+    	this->items = newItems;
+    	cap = newCap;
+    	sz = 0;
+    	numberOfAccount = 0;
+    }
+
+    T** getItems() {
+    	return items;
+    }
+    template<class H>
+    void increaseCapacity(H& hasher);
 
     // capacity() returns the capacity of the ArrayList.
     unsigned int capacity() const;

@@ -16,7 +16,7 @@ HashMap::HashMap(const HashMap& hm) {
 }
 
 HashMap::~HashMap() {
-	std::cout << "";
+	
 }
 
 HashMap& HashMap::operator=(const HashMap& hm) {
@@ -25,11 +25,37 @@ HashMap& HashMap::operator=(const HashMap& hm) {
 
 void HashMap::add(const std::string& key, const std::string& value) {
 
-	std::cout << "LoadFactor: " << loadFactor() << std::endl;
+	//std::cout << "LoadFactor: " << loadFactor() << std::endl; // DEBUG 
 	if(loadFactor() >= 0.8) {
-		arrList.increaseCapacity();
-		std::cout << "Expanded\n";
-		std::cout << "LoadFactor: " << loadFactor() << std::endl;
+		std::cout << "LoadFactor: " << loadFactor() << std::endl; //DEBUG
+		std::cout << "Rehash Started\n";
+
+		unsigned int oldCapacity = bucketCount();
+		numberOfAccount = 0;
+		unsigned int newCapacity = bucketCount() * 2 + 1;
+		Node** newItems = new Node*[newCapacity];
+		Node** tempItems = arrList.getItems();
+
+		arrList.setItems(newItems, newCapacity);
+		Node* tempNode;
+		for(unsigned int i =0; i < oldCapacity; i++) {
+		
+			tempNode = tempItems[i];
+			Node* currentNode;
+			if(tempNode != NULL) {
+				do {
+					currentNode = tempNode;
+					add(tempNode->key, tempNode->value);
+					if(tempNode->next != NULL) {
+						tempNode = tempNode->next;
+					}
+				}while(currentNode->next != NULL);
+			}
+		
+		}
+		//arrList.increaseCapacity(hasher);
+		std::cout << "Rehashed\n";
+		std::cout << "LoadFactor: " << loadFactor() << std::endl; //DEBUG
 	}
 
 	unsigned int index = hasher(key) % bucketCount() ;
@@ -44,28 +70,43 @@ void HashMap::add(const std::string& key, const std::string& value) {
 	pTempNode = arrList.at(index);
 	
 	if(pTempNode == NULL) {
-		std::cout << "No Item at this index " << index << std::endl;
 		arrList.add(pNode, index);
 		increaseNumberOfAccount();
-		std::cout << index << " added \n" ;
+		std::cout << "CREATED" << std::endl;
+		//std::cout << pNode->key << " || " << index << " is added to empty spot. \n" ;
 	}else { // If Node Exists, then...
+
+		//std::cout << "HEAD IS NOT EMPTY\n";
 		bool keyExist = false;
+		Node* currentNode;
 
-		while(pTempNode->next != NULL) {
-			if(pTempNode->key == key) {
-				//keyExist = true; // MUST
+		do{
+			currentNode = pTempNode;
+			//std::cout << pTempNode->key<< " || " <<pNode->key<<" CURRENTLY CHEKS\n";
+			if(pTempNode->key == pNode->key) {
+				keyExist = true; // MUST
+				break;
+			}if(pTempNode->next != NULL) {
+				//std::cout << "NEXT NODE IS NULL\n";
+
+				pTempNode = pTempNode->next;
 			}
-			pTempNode = pTempNode->next;
+		}while(currentNode->next != NULL);
 
-		}
+
+
 		if(keyExist) {
-			std::cout << "EXISTS\n";
+			std::cout << "EXISTS" << std::endl;
 		}else {
 			//arrList.increaseSize();
+
 			increaseNumberOfAccount();
 			pTempNode->next = pNode;	
+			//std::cout << pTempNode->key <<" || "<< index << "previous node \n" ;
+
 			pTempNode = pTempNode->next;
-			std::cout << pTempNode->key <<" "<< index << " l added \n" ;
+			//std::cout << pTempNode->key <<" || "<< index << " is added to chain \n" ;
+			std::cout << "CREATED" << std::endl;
 		}
 		
 	}
@@ -97,7 +138,7 @@ void HashMap::remove(const std::string& key) {
 					//delete pTempNode;
 				}
 				isExist = true;
-				std::cout << pTempNode->key << " " << pTempNode->value << " is deleted\n";
+				//std::cout << pTempNode->key << " " << pTempNode->value << " is deleted\n";
 				arrList.decreaseSize();
 				decreaseNumberOfAccount();
 				delete pTempNode;
@@ -105,7 +146,7 @@ void HashMap::remove(const std::string& key) {
 			}
 			previousNode = pTempNode;
 			pTempNode = pTempNode->next;
-		}while(pTempNode->next != NULL);
+		}while(previousNode->next != NULL);
 		if(!isExist)
 			std::cout << "NONEXISTENT\n";
 	}
@@ -116,19 +157,22 @@ bool HashMap::contains(const std::string& key) const {
 	unsigned int index = hasher(key) % bucketCount() ;
 
 	Node* pTempNode = arrList.at(index); 
-
+	Node* currentNode;
 	bool flag = false;
 
 	if(arrList.at(index) != NULL) {
 		do{
-			std::cout << "Checlk " << pTempNode->key << key << std::endl;
+			currentNode = pTempNode;
+			//std::cout << "Checlk " << pTempNode->key << key << std::endl;
 			if(key == pTempNode->key)
 			{
-				std::cout << "EXIST " << pTempNode->key << key << std::endl;		
+				//std::cout << "EXIST " << pTempNode->key << key << std::endl;		
 				flag = true;
 				break;
+			}else if(pTempNode->next != NULL) {
+				pTempNode = pTempNode->next;
 			}
-		}while(pTempNode->next != NULL);
+		}while(currentNode->next != NULL);
 		
 	} else {
 		std::cout << "Something NOT exists" << std::endl;
@@ -138,7 +182,29 @@ bool HashMap::contains(const std::string& key) const {
 }
 
 std::string HashMap::value(const std::string& key) const {
-	return "";
+	
+	std::string value = "";
+
+	if(contains(key)) {
+		unsigned int index = hasher(key) % bucketCount() ;
+
+		Node* pTempNode = arrList.at(index); 
+
+		Node* currentNode;
+
+		do{
+			currentNode = pTempNode;
+			
+			if(pTempNode->key == key) {
+				value = pTempNode->value;
+				break;
+			}else if(pTempNode->next != NULL) {
+				pTempNode = pTempNode->next;
+			}
+		}while(currentNode->next != NULL);
+	} 
+
+	return value;
 }
 
 unsigned int HashMap::size() const {
@@ -151,6 +217,37 @@ double HashMap::loadFactor() const {
 
 	return (double)size()/(double)bucketCount();
 }
+
 unsigned int HashMap::maxBucketSize() const{
-	return 0;
+
+	Node* pTempNode;
+	unsigned int maxNumber = 0;
+	unsigned int bucketThatHoldsMaxNumber = 0;
+	
+	for(unsigned int i = 0; i < bucketCount(); i++) {
+		pTempNode = arrList.at(i);
+		unsigned int counter = 0;
+		while(pTempNode != NULL) {
+			counter++;
+			pTempNode = pTempNode->next;
+		}
+
+		if(maxNumber < counter) {
+			maxNumber = counter;
+			bucketThatHoldsMaxNumber = i;
+		}
+	}
+
+	return maxNumber;
+}
+
+void HashMap::showAllLinkedList(const std::string& key){
+    unsigned int index = hasher(key) % bucketCount() ;
+    Node* pTempNode = arrList.at(index);
+
+    while(pTempNode != NULL) {
+        std::cout << pTempNode->key << " " << pTempNode->value << " \n";
+        pTempNode = pTempNode->next;
+    }
+    
 }

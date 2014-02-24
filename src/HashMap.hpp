@@ -92,15 +92,10 @@ public:
     // HashMap's largest bucket.
     unsigned int maxBucketSize() const;
 
-    void showAllLinkedList(const std::string& key){
-        unsigned int index = hasher(key) % bucketCount() ;
-        Node* pTempNode = arrList.at(index);
-
-        while(pTempNode->next != NULL) {
-            std::cout << pTempNode->key << " " << pTempNode->value << " \n";
-            pTempNode = pTempNode->next;
-        }
-        std::cout << pTempNode->key << " " << pTempNode->value << " \n";
+    void showAllLinkedList(const std::string& key);
+    
+    unsigned int getIndex(const std::string& key) const  {
+        return hasher(key) % bucketCount() ;
     }
 
     void increaseNumberOfAccount() {

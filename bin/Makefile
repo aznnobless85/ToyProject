@@ -178,60 +178,6 @@ src/HashMap.cpp.s:
 	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/HashMap.cpp.s
 .PHONY : src/HashMap.cpp.s
 
-src/commandParser.o: src/commandParser.cpp.o
-.PHONY : src/commandParser.o
-
-# target to build an object file
-src/commandParser.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandParser.cpp.o
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandParser.cpp.o
-.PHONY : src/commandParser.cpp.o
-
-src/commandParser.i: src/commandParser.cpp.i
-.PHONY : src/commandParser.i
-
-# target to preprocess a source file
-src/commandParser.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandParser.cpp.i
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandParser.cpp.i
-.PHONY : src/commandParser.cpp.i
-
-src/commandParser.s: src/commandParser.cpp.s
-.PHONY : src/commandParser.s
-
-# target to generate assembly for a file
-src/commandParser.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandParser.cpp.s
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandParser.cpp.s
-.PHONY : src/commandParser.cpp.s
-
-src/commandProcess.o: src/commandProcess.cpp.o
-.PHONY : src/commandProcess.o
-
-# target to build an object file
-src/commandProcess.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcess.cpp.o
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o
-.PHONY : src/commandProcess.cpp.o
-
-src/commandProcess.i: src/commandProcess.cpp.i
-.PHONY : src/commandProcess.i
-
-# target to preprocess a source file
-src/commandProcess.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcess.cpp.i
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.i
-.PHONY : src/commandProcess.cpp.i
-
-src/commandProcess.s: src/commandProcess.cpp.s
-.PHONY : src/commandProcess.s
-
-# target to generate assembly for a file
-src/commandProcess.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcess.cpp.s
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.s
-.PHONY : src/commandProcess.cpp.s
-
 src/commandProcessor.o: src/commandProcessor.cpp.o
 .PHONY : src/commandProcessor.o
 
@@ -258,6 +204,33 @@ src/commandProcessor.cpp.s:
 	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.s
 	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.s
 .PHONY : src/commandProcessor.cpp.s
+
+src/commandValidation.o: src/commandValidation.cpp.o
+.PHONY : src/commandValidation.o
+
+# target to build an object file
+src/commandValidation.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandValidation.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o
+.PHONY : src/commandValidation.cpp.o
+
+src/commandValidation.i: src/commandValidation.cpp.i
+.PHONY : src/commandValidation.i
+
+# target to preprocess a source file
+src/commandValidation.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandValidation.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.i
+.PHONY : src/commandValidation.cpp.i
+
+src/commandValidation.s: src/commandValidation.cpp.s
+.PHONY : src/commandValidation.s
+
+# target to generate assembly for a file
+src/commandValidation.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandValidation.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.s
+.PHONY : src/commandValidation.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -374,15 +347,12 @@ help:
 	@echo "... src/HashMap.o"
 	@echo "... src/HashMap.i"
 	@echo "... src/HashMap.s"
-	@echo "... src/commandParser.o"
-	@echo "... src/commandParser.i"
-	@echo "... src/commandParser.s"
-	@echo "... src/commandProcess.o"
-	@echo "... src/commandProcess.i"
-	@echo "... src/commandProcess.s"
 	@echo "... src/commandProcessor.o"
 	@echo "... src/commandProcessor.i"
 	@echo "... src/commandProcessor.s"
+	@echo "... src/commandValidation.o"
+	@echo "... src/commandValidation.i"
+	@echo "... src/commandValidation.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

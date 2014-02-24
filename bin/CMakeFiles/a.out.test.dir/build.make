@@ -95,32 +95,9 @@ CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o.provides: CMakeFiles/a.out.test
 
 CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o.provides.build: CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o
 
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o: CMakeFiles/a.out.test.dir/flags.make
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o: ../src/commandProcess.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o -c /home/ics45c/projects/hashit/src/commandProcess.cpp
-
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.test.dir/src/commandProcess.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ics45c/projects/hashit/src/commandProcess.cpp > CMakeFiles/a.out.test.dir/src/commandProcess.cpp.i
-
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.test.dir/src/commandProcess.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ics45c/projects/hashit/src/commandProcess.cpp -o CMakeFiles/a.out.test.dir/src/commandProcess.cpp.s
-
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.requires:
-.PHONY : CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.requires
-
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.provides: CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.requires
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.provides.build
-.PHONY : CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.provides
-
-CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.provides.build: CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o
-
 CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o: CMakeFiles/a.out.test.dir/flags.make
 CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o: ../src/ArrayList.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o"
 	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o -c /home/ics45c/projects/hashit/src/ArrayList.cpp
 
@@ -143,7 +120,7 @@ CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o.provides.build: CMakeFiles/a.out.t
 
 CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: CMakeFiles/a.out.test.dir/flags.make
 CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o: ../src/commandProcessor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o"
 	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o -c /home/ics45c/projects/hashit/src/commandProcessor.cpp
 
@@ -164,32 +141,9 @@ CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o.provides: CMakeFiles/a.out.
 
 CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o.provides.build: CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o
 
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o: CMakeFiles/a.out.test.dir/flags.make
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o: ../src/commandParser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/commandParser.cpp.o"
-	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/commandParser.cpp.o -c /home/ics45c/projects/hashit/src/commandParser.cpp
-
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.test.dir/src/commandParser.cpp.i"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ics45c/projects/hashit/src/commandParser.cpp > CMakeFiles/a.out.test.dir/src/commandParser.cpp.i
-
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.test.dir/src/commandParser.cpp.s"
-	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ics45c/projects/hashit/src/commandParser.cpp -o CMakeFiles/a.out.test.dir/src/commandParser.cpp.s
-
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.requires:
-.PHONY : CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.requires
-
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.provides: CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.requires
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.provides.build
-.PHONY : CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.provides
-
-CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.provides.build: CMakeFiles/a.out.test.dir/src/commandParser.cpp.o
-
 CMakeFiles/a.out.test.dir/src/HashMap.cpp.o: CMakeFiles/a.out.test.dir/flags.make
 CMakeFiles/a.out.test.dir/src/HashMap.cpp.o: ../src/HashMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/HashMap.cpp.o"
 	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/HashMap.cpp.o -c /home/ics45c/projects/hashit/src/HashMap.cpp
 
@@ -212,7 +166,7 @@ CMakeFiles/a.out.test.dir/src/HashMap.cpp.o.provides.build: CMakeFiles/a.out.tes
 
 CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o: CMakeFiles/a.out.test.dir/flags.make
 CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o: ../src/parsingUtil.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o"
 	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o -c /home/ics45c/projects/hashit/src/parsingUtil.cpp
 
@@ -233,28 +187,49 @@ CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o.provides: CMakeFiles/a.out.test.
 
 CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o.provides.build: CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o
 
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o: CMakeFiles/a.out.test.dir/flags.make
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o: ../src/commandValidation.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ics45c/projects/hashit/bin/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o"
+	/usr/bin/clang++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o -c /home/ics45c/projects/hashit/src/commandValidation.cpp
+
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/a.out.test.dir/src/commandValidation.cpp.i"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ics45c/projects/hashit/src/commandValidation.cpp > CMakeFiles/a.out.test.dir/src/commandValidation.cpp.i
+
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/a.out.test.dir/src/commandValidation.cpp.s"
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ics45c/projects/hashit/src/commandValidation.cpp -o CMakeFiles/a.out.test.dir/src/commandValidation.cpp.s
+
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.requires:
+.PHONY : CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.requires
+
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.provides: CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.provides.build
+.PHONY : CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.provides
+
+CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.provides.build: CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o
+
 # Object files for target a.out.test
 a_out_test_OBJECTS = \
 "CMakeFiles/a.out.test.dir/test/testmain.cpp.o" \
 "CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o" \
-"CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o" \
 "CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o" \
 "CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o" \
-"CMakeFiles/a.out.test.dir/src/commandParser.cpp.o" \
 "CMakeFiles/a.out.test.dir/src/HashMap.cpp.o" \
-"CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o"
+"CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o" \
+"CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o"
 
 # External object files for target a.out.test
 a_out_test_EXTERNAL_OBJECTS =
 
 a.out.test: CMakeFiles/a.out.test.dir/test/testmain.cpp.o
 a.out.test: CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o
-a.out.test: CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o
 a.out.test: CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o
 a.out.test: CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o
-a.out.test: CMakeFiles/a.out.test.dir/src/commandParser.cpp.o
 a.out.test: CMakeFiles/a.out.test.dir/src/HashMap.cpp.o
 a.out.test: CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o
+a.out.test: CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o
 a.out.test: CMakeFiles/a.out.test.dir/build.make
 a.out.test: CMakeFiles/a.out.test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable a.out.test"
@@ -266,12 +241,11 @@ CMakeFiles/a.out.test.dir/build: a.out.test
 
 CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/test/testmain.cpp.o.requires
 CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o.requires
-CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/commandProcess.cpp.o.requires
 CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o.requires
 CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o.requires
-CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/commandParser.cpp.o.requires
 CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/HashMap.cpp.o.requires
 CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o.requires
+CMakeFiles/a.out.test.dir/requires: CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o.requires
 .PHONY : CMakeFiles/a.out.test.dir/requires
 
 CMakeFiles/a.out.test.dir/clean:

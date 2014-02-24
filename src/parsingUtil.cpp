@@ -44,7 +44,8 @@ bool isDebugCommand(std::string command) {
     if(command == "LOGIN COUNT" || 
         command == "BUCKET COUNT" ||
         command == "LOAD FACTOR" || 
-        command == "MAX BUCKET SIZE" ) 
+        command == "MAX BUCKET SIZE" ||
+        command == "SHOW ALL") 
             flag = true;
 
     return flag;
@@ -61,4 +62,28 @@ bool checkValidNumberOfArguments(std::string rawStr, std::string firstWord){
     else
         return true; // THIS WILL NEVER HAPPEN
 
+}
+
+std::string* twoParamParser(std::string str) {
+
+    int firstOffsetOfEmptyChar = positionOfFirstEmptyChar(str);
+        
+    std::string parameters = str.substr(firstOffsetOfEmptyChar+1);
+
+
+    std::string* pParameters = new std::string[2];
+    firstOffsetOfEmptyChar = positionOfFirstEmptyChar(parameters);
+    pParameters[0] = parameters.substr(0, firstOffsetOfEmptyChar);
+    pParameters[1] = parameters.substr(firstOffsetOfEmptyChar+1);
+   
+    return pParameters;
+}
+
+std::string oneParamParser(std::string str) {
+
+    int firstOffsetOfEmptyChar = positionOfFirstEmptyChar(str);
+        
+    std::string parameter = str.substr(firstOffsetOfEmptyChar+1);
+
+    return parameter;
 }
