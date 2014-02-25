@@ -9,23 +9,18 @@ CMakeFiles/a.out.dir/src/HashMap.cpp.o
  /home/ics45c/projects/hashit/src/ArrayList.hpp
  /home/ics45c/projects/hashit/src/HashMap.cpp
  /home/ics45c/projects/hashit/src/HashMap.hpp
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o
+CMakeFiles/a.out.dir/src/Manager.cpp.o
  /home/ics45c/projects/hashit/src/ArrayList.cpp
  /home/ics45c/projects/hashit/src/ArrayList.hpp
  /home/ics45c/projects/hashit/src/HashMap.hpp
- /home/ics45c/projects/hashit/src/commandProcessor.cpp
- /home/ics45c/projects/hashit/src/commandProcessor.hpp
- /home/ics45c/projects/hashit/src/commandValidation.h
- /home/ics45c/projects/hashit/src/parsingUtil.h
-CMakeFiles/a.out.dir/src/commandValidation.cpp.o
- /home/ics45c/projects/hashit/src/commandValidation.cpp
+ /home/ics45c/projects/hashit/src/Manager.cpp
+ /home/ics45c/projects/hashit/src/Manager.hpp
  /home/ics45c/projects/hashit/src/parsingUtil.h
 CMakeFiles/a.out.dir/src/main.cpp.o
  /home/ics45c/projects/hashit/src/ArrayList.cpp
  /home/ics45c/projects/hashit/src/ArrayList.hpp
  /home/ics45c/projects/hashit/src/HashMap.hpp
- /home/ics45c/projects/hashit/src/commandProcessor.hpp
- /home/ics45c/projects/hashit/src/commandValidation.h
+ /home/ics45c/projects/hashit/src/Manager.hpp
  /home/ics45c/projects/hashit/src/main.cpp
  /home/ics45c/projects/hashit/src/parsingUtil.h
 CMakeFiles/a.out.dir/src/parsingUtil.cpp.o

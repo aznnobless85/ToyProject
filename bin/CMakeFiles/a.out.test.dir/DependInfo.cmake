@@ -6,8 +6,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/ics45c/projects/hashit/src/ArrayList.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/src/ArrayList.cpp.o"
   "/home/ics45c/projects/hashit/src/HashMap.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/src/HashMap.cpp.o"
-  "/home/ics45c/projects/hashit/src/commandProcessor.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o"
-  "/home/ics45c/projects/hashit/src/commandValidation.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o"
+  "/home/ics45c/projects/hashit/src/Manager.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/src/Manager.cpp.o"
   "/home/ics45c/projects/hashit/src/parsingUtil.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o"
   "/home/ics45c/projects/hashit/test/TestHashMap.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o"
   "/home/ics45c/projects/hashit/test/testmain.cpp" "/home/ics45c/projects/hashit/bin/CMakeFiles/a.out.test.dir/test/testmain.cpp.o"

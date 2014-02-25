@@ -9,22 +9,17 @@ CMakeFiles/a.out.dir/src/HashMap.cpp.o: ../src/ArrayList.hpp
 CMakeFiles/a.out.dir/src/HashMap.cpp.o: ../src/HashMap.cpp
 CMakeFiles/a.out.dir/src/HashMap.cpp.o: ../src/HashMap.hpp
 
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/ArrayList.cpp
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/ArrayList.hpp
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/HashMap.hpp
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/commandProcessor.cpp
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/commandProcessor.hpp
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/commandValidation.h
-CMakeFiles/a.out.dir/src/commandProcessor.cpp.o: ../src/parsingUtil.h
-
-CMakeFiles/a.out.dir/src/commandValidation.cpp.o: ../src/commandValidation.cpp
-CMakeFiles/a.out.dir/src/commandValidation.cpp.o: ../src/parsingUtil.h
+CMakeFiles/a.out.dir/src/Manager.cpp.o: ../src/ArrayList.cpp
+CMakeFiles/a.out.dir/src/Manager.cpp.o: ../src/ArrayList.hpp
+CMakeFiles/a.out.dir/src/Manager.cpp.o: ../src/HashMap.hpp
+CMakeFiles/a.out.dir/src/Manager.cpp.o: ../src/Manager.cpp
+CMakeFiles/a.out.dir/src/Manager.cpp.o: ../src/Manager.hpp
+CMakeFiles/a.out.dir/src/Manager.cpp.o: ../src/parsingUtil.h
 
 CMakeFiles/a.out.dir/src/main.cpp.o: ../src/ArrayList.cpp
 CMakeFiles/a.out.dir/src/main.cpp.o: ../src/ArrayList.hpp
 CMakeFiles/a.out.dir/src/main.cpp.o: ../src/HashMap.hpp
-CMakeFiles/a.out.dir/src/main.cpp.o: ../src/commandProcessor.hpp
-CMakeFiles/a.out.dir/src/main.cpp.o: ../src/commandValidation.h
+CMakeFiles/a.out.dir/src/main.cpp.o: ../src/Manager.hpp
 CMakeFiles/a.out.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/a.out.dir/src/main.cpp.o: ../src/parsingUtil.h
 

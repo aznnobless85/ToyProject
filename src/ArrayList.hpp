@@ -10,13 +10,13 @@ class ArrayList
 
 public:
     ArrayList();
+    ArrayList(unsigned int initCapacity);
     ArrayList(const ArrayList<T>& a);
     ~ArrayList();
 
     ArrayList<T>& operator=(const ArrayList<T>& a);
 
     T* at(unsigned int index) const;
-   
 
     void add(T* t, unsigned int index);
 
@@ -25,35 +25,25 @@ public:
     // size() returns the size of the ArrayList.
     unsigned int size() const;
 
-    void increaseSize() {
-    	sz++;
-    	numberOfAccount++;
-    }
-
-    void decreaseSize() {
-    	sz--;
-    }
-
-    void setItems(T** newItems, unsigned int newCap) {
-    	delete items;
-    	this->items = newItems;
-    	cap = newCap;
-    	sz = 0;
-    	numberOfAccount = 0;
-    }
-
-    T** getItems() {
-    	return items;
-    }
-    template<class H>
-    void increaseCapacity(H& hasher);
-
     // capacity() returns the capacity of the ArrayList.
     unsigned int capacity() const;
 
-    private:
+    unsigned int getNumberOfAccount() const;
 
-    // std::string* items;
+    void setCapacity(unsigned int capacity);
+    
+    // increaseSize() increases size of the ArrayList
+    void increaseSize();
+
+    // decreaseSIze() decreases size of the ArrayList
+    void decreaseSize();
+
+    void setItems(T** newItems, unsigned int newCap);
+
+    T** getItems();
+ 
+private:
+
     T** items;
     unsigned int sz;
     unsigned int numberOfAccount;

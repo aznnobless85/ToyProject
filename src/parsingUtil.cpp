@@ -45,7 +45,9 @@ bool isDebugCommand(std::string command) {
         command == "BUCKET COUNT" ||
         command == "LOAD FACTOR" || 
         command == "MAX BUCKET SIZE" ||
-        command == "SHOW ALL") 
+        command == "SHOW ALL" ||
+        command == "ADD 100DATA" ||
+        command == "SHOW HASHMAP") 
             flag = true;
 
     return flag;
@@ -86,4 +88,16 @@ std::string oneParamParser(std::string str) {
     std::string parameter = str.substr(firstOffsetOfEmptyChar+1);
 
     return parameter;
+}
+
+bool checkValidBasicCommand(std::string firstWord) {
+    bool flag = false;
+    if(firstWord == "CREATE" ||
+        firstWord == "LOGIN" ||
+        firstWord == "REMOVE" ||
+        firstWord == "CLEAR" ||
+        firstWord == "QUIT" ||
+        firstWord == "DEBUG") 
+        flag = true;
+    return flag;
 }

@@ -1,10 +1,9 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/a.out.dir/src/ArrayList.cpp.o"
   "CMakeFiles/a.out.dir/src/main.cpp.o"
-  "CMakeFiles/a.out.dir/src/commandProcessor.cpp.o"
   "CMakeFiles/a.out.dir/src/HashMap.cpp.o"
   "CMakeFiles/a.out.dir/src/parsingUtil.cpp.o"
-  "CMakeFiles/a.out.dir/src/commandValidation.cpp.o"
+  "CMakeFiles/a.out.dir/src/Manager.cpp.o"
   "a.out.pdb"
   "a.out"
 )

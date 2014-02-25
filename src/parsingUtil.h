@@ -14,5 +14,6 @@ bool isDebugCommand(std::string command);
 bool checkValidNumberOfArguments(std::string rawStr, std::string firstWord);
 std::string* twoParamParser(std::string parameters);
 std::string oneParamParser(std::string str);
+bool checkValidBasicCommand(std::string firstWord);
 
 #endif 

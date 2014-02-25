@@ -11,7 +11,6 @@
 
 #include "ArrayList.hpp"
 
-
 class HashMap
 {
 public:
@@ -41,6 +40,7 @@ public:
     // undefined behavior.
     HashMap(const HashMap& hm);
     ~HashMap();
+
     HashMap& operator=(const HashMap& hm);
 
     // add() takes a key and a value.  If the key is not already stored in
@@ -93,19 +93,16 @@ public:
     unsigned int maxBucketSize() const;
 
     void showAllLinkedList(const std::string& key);
+
+    void showAllHashmap();
     
-    unsigned int getIndex(const std::string& key) const  {
-        return hasher(key) % bucketCount() ;
-    }
+    void clearHashMap();
 
-    void increaseNumberOfAccount() {
-        numberOfAccount++;
-    }
+    void increaseNumberOfAccount();
 
-    void decreaseNumberOfAccount() {
-        numberOfAccount--;
-    }
+    void decreaseNumberOfAccount();
 
+    void temp();
 private:
     // This structure describes the nodes that make up the linked lists in
     // each of this HashMap's buckets.
@@ -116,25 +113,20 @@ private:
         Node* next;
     };
 
-    struct MyHash {
-        unsigned int operator()(std::string const& str) const {
-            unsigned int sum = 0;
-            for(unsigned int i = 0; i < str.length();i++) 
-            {
-                char ch = str.at(i);
-                sum += ch;
-            }
-            return sum;
-        }
-    };
+    
+
+    void expandBucket();
+    unsigned int getIndex(const std::string& key) const;
     // Store the hash function (either the default hash function or the one
     // passed to the constructor as a parameter) in this member variable.
     // When you want to hash a key, call this member variable (i.e., follow
     // it with parentheses and a parameter) just like you would any other
     // function.
+    bool isExpanding;
     HashFunction hasher;
-    ArrayList<Node> arrList;
+    ArrayList<Node>* arrList;
     unsigned int numberOfAccount;
+
     
 
     // You will no doubt need to add at least a few more private members

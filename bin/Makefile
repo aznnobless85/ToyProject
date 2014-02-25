@@ -178,59 +178,32 @@ src/HashMap.cpp.s:
 	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/HashMap.cpp.s
 .PHONY : src/HashMap.cpp.s
 
-src/commandProcessor.o: src/commandProcessor.cpp.o
-.PHONY : src/commandProcessor.o
+src/Manager.o: src/Manager.cpp.o
+.PHONY : src/Manager.o
 
 # target to build an object file
-src/commandProcessor.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.o
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.o
-.PHONY : src/commandProcessor.cpp.o
+src/Manager.cpp.o:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/Manager.cpp.o
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/Manager.cpp.o
+.PHONY : src/Manager.cpp.o
 
-src/commandProcessor.i: src/commandProcessor.cpp.i
-.PHONY : src/commandProcessor.i
-
-# target to preprocess a source file
-src/commandProcessor.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.i
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.i
-.PHONY : src/commandProcessor.cpp.i
-
-src/commandProcessor.s: src/commandProcessor.cpp.s
-.PHONY : src/commandProcessor.s
-
-# target to generate assembly for a file
-src/commandProcessor.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandProcessor.cpp.s
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandProcessor.cpp.s
-.PHONY : src/commandProcessor.cpp.s
-
-src/commandValidation.o: src/commandValidation.cpp.o
-.PHONY : src/commandValidation.o
-
-# target to build an object file
-src/commandValidation.cpp.o:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandValidation.cpp.o
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.o
-.PHONY : src/commandValidation.cpp.o
-
-src/commandValidation.i: src/commandValidation.cpp.i
-.PHONY : src/commandValidation.i
+src/Manager.i: src/Manager.cpp.i
+.PHONY : src/Manager.i
 
 # target to preprocess a source file
-src/commandValidation.cpp.i:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandValidation.cpp.i
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.i
-.PHONY : src/commandValidation.cpp.i
+src/Manager.cpp.i:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/Manager.cpp.i
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/Manager.cpp.i
+.PHONY : src/Manager.cpp.i
 
-src/commandValidation.s: src/commandValidation.cpp.s
-.PHONY : src/commandValidation.s
+src/Manager.s: src/Manager.cpp.s
+.PHONY : src/Manager.s
 
 # target to generate assembly for a file
-src/commandValidation.cpp.s:
-	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/commandValidation.cpp.s
-	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/commandValidation.cpp.s
-.PHONY : src/commandValidation.cpp.s
+src/Manager.cpp.s:
+	$(MAKE) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/src/Manager.cpp.s
+	$(MAKE) -f CMakeFiles/a.out.test.dir/build.make CMakeFiles/a.out.test.dir/src/Manager.cpp.s
+.PHONY : src/Manager.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -347,12 +320,9 @@ help:
 	@echo "... src/HashMap.o"
 	@echo "... src/HashMap.i"
 	@echo "... src/HashMap.s"
-	@echo "... src/commandProcessor.o"
-	@echo "... src/commandProcessor.i"
-	@echo "... src/commandProcessor.s"
-	@echo "... src/commandValidation.o"
-	@echo "... src/commandValidation.i"
-	@echo "... src/commandValidation.s"
+	@echo "... src/Manager.o"
+	@echo "... src/Manager.i"
+	@echo "... src/Manager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
