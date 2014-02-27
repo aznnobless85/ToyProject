@@ -1,6 +1,6 @@
 #include "HashMap.hpp"
 #include <iostream>
-
+#include <cstring>
 
 namespace {
     unsigned int myHash(const std::string& key) {
@@ -26,6 +26,7 @@ HashMap::HashMap() {
 
 // Constructor with one argument
 HashMap::HashMap(HashFunction hasher) {
+	arrList = new ArrayList<Node>(initialBucketCount);
 	this->hasher = hasher;
 	numberOfAccount = 0;
 	isExpanding = false;
@@ -33,11 +34,53 @@ HashMap::HashMap(HashFunction hasher) {
 
 // Copy Constructor
 HashMap::HashMap(const HashMap& hm){ 
+
 	hasher = hm.hasher;
 	isExpanding = hm.isExpanding;
 	numberOfAccount = hm.numberOfAccount;
+
 	arrList = new ArrayList<Node>(*hm.arrList);
 	
+
+	// for(unsigned int i = 0; i < hm.bucketCount(); i++) {
+	// 	Node* source = hm.arrList->at(i);
+	// 	Node* target = arrList->at(i);
+
+	// 	int count = 0;
+	// 	while(source != nullptr) {
+			
+	// 		if(count == 0) {
+	// 			Node* pTempNode = new Node;
+	// 			pTempNode->key = source->key;
+
+	// 			pTempNode->value = source->value;
+	// 			if(source->next == nullptr)
+	// 				pTempNode->next = nullptr;
+	// 			else
+	// 				pTempNode->next = new Node;
+	// 			arrList->add(pTempNode, i);
+	// 			count++;
+	// 			target = arrList->at(i);
+				
+	// 			//break;
+	// 		} else {
+
+	// 			target = target->next;
+	// 			target->key = source->key;
+	// 			target->value = source->value;
+	// 			if(source->next == nullptr)
+	// 				target->next = nullptr;
+	// 			else
+	// 				target->next = new Node;
+	// 		}
+
+
+	// 		source = source->next;
+			
+	// 	}
+		
+	// }
+
 }
 
 // Destructor
@@ -57,7 +100,7 @@ HashMap::~HashMap() {
 			}
 		}
 	}
-
+	
 	delete arrList;
 
 	
@@ -65,11 +108,62 @@ HashMap::~HashMap() {
 // Operator Overload
 HashMap& HashMap::operator=(const HashMap& hm) {
 	if(this != &hm) {
+		this->clearHashMap();
 		hasher = hm.hasher;
 		isExpanding = hm.isExpanding;
-		delete arrList;
-		arrList = new ArrayList<Node>(*hm.arrList);
 		numberOfAccount = hm.numberOfAccount;
+		
+		// Deep copy is needed. So I created new Array.
+		ArrayList<Node>* newArrList = new ArrayList<Node>(hm.bucketCount());
+		
+		// for(unsigned int i = 0; i < hm.bucketCount(); i++) {
+		// Node* source = hm.arrList->at(i);
+		// Node* target;
+
+		// int count = 0;
+		// while(source != nullptr) 
+		// {
+
+			
+		// 	if(count == 0) 
+		// 	{
+		// 		Node* pTempNode = new Node;
+
+		// 		pTempNode->key = source->key;
+		// 		pTempNode->value = source->value;
+
+		// 		if(source->next == nullptr)
+		// 			pTempNode->next = nullptr;
+		// 		else
+		// 			pTempNode->next = new Node;
+		// 		newArrList->add(pTempNode, i);
+		// 		count++;
+		// 		target = newArrList->at(i);
+				
+		// 	} else 
+		// 	{
+
+		// 		target = target->next;
+		// 		target->key = source->key;
+		// 		target->value = source->value;
+		// 		//arrList->increaseSize();
+		// 		if(source->next == nullptr)
+		// 			target->next = nullptr;
+		// 		else
+		// 			target->next = new Node;
+		// 	}
+
+		// 	source = source->next;
+			
+		// }
+
+		delete arrList;
+		arrList = newArrList; 
+		
+	//	}
+
+
+		
 	}
 
 	return *this;
@@ -340,38 +434,13 @@ void HashMap::decreaseNumberOfAccount() {
     numberOfAccount--;
 }
 
-
 // FUNCTION that performs my personal DEBUG COMMAND
 void HashMap::temp() {
 
-    for(int i = 0; i < 100; i++) {
 
-        std::string userid = "";
-        std::string password = "";
-        std::string vary ="";
-        if(i%3 == 0){
-            userid= "us";
-        }else if(i%3 == 1){
-            userid= "tImO";
-        }else{
-            userid= "pQ";
-        }
-        
-        if(i < 25) {
-            userid+= "BOO_DOG" + std::to_string(i);
-            password = std::to_string(i);
-        } else if(i < 50) {
-            userid+= "IcS45C" + std::to_string(i);
-            password = std::to_string(i);
-        } else if(i < 75) {
-            userid+= "UCIANTEATER" + std::to_string(i);
-            password = std::to_string(i);
-        } else {
-            userid+= "WtFnOP" + std::to_string(i);
-            password = std::to_string(i);
-        }
-        
-        add(userid, password);
+    	add("Singed","1");
+    	add("Timo","1");
 
-    }
+
+    
 }

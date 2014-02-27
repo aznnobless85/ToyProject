@@ -23,6 +23,8 @@ HashMap.hpp
 /home/ics45c/projects/hashit/src/HashMap.hpp
 iostream
 -
+cstring
+-
 
 /home/ics45c/projects/hashit/src/HashMap.hpp
 functional
@@ -55,6 +57,8 @@ Manager.hpp
 /home/ics45c/projects/hashit/src/Manager.hpp
 HashMap.hpp
 /home/ics45c/projects/hashit/src/HashMap.hpp
+ArrayList.hpp
+/home/ics45c/projects/hashit/src/ArrayList.hpp
 
 /home/ics45c/projects/hashit/src/parsingUtil.h
 string

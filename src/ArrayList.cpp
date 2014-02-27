@@ -7,12 +7,46 @@
 namespace
 {
     const unsigned int initialCapacity = 10;
+
     template<class T>
     void arrayCopy(T* target, T* source, unsigned int capacity)
     {
         for (unsigned int i = 0; i < capacity; i++)
         {
-            target[i] = source[i];
+            std::cout << "!!!!!!" << std::endl;
+            int count = 0;
+            while(source != nullptr)
+            {
+
+                if(count == 0) {
+                    T* pTempNode = new T;
+                    pTempNode->key = source->key;
+                    pTempNode->value = source->value;
+                    if(source->next == nullptr)
+                        pTempNode->next = nullptr;
+                    else
+                        pTempNode->next = new T;
+                    target->add(pTempNode, i);
+                    count++;
+                    target = target->at(i);
+                }
+                else 
+                {
+
+                    target = target->next;
+                    target->key = source->key;
+                    target->value = source->value;
+
+                    if(source->next == nullptr)
+                        target->next = nullptr;
+                    else
+                        target->next = new T;
+                }
+
+                source = source->next;
+            }
+
+            //target[i] = source[i];
         }
     }
 }
@@ -43,12 +77,17 @@ ArrayList<T>::ArrayList(unsigned int initCapacity)
 template<class T>
 ArrayList<T>::ArrayList(const ArrayList<T>& a)
 {
-    items = new T*[a.cap];
+
+    items = new T*[a.cap]; 
+    //arrayCopy(newItems, a.items, a.cap);
+    for(unsigned int i = 0; i < a.cap; i++) {
+         items[i] = nullptr;
+    }
+
     sz = a.sz;
     numberOfAccount = a.numberOfAccount;;
     cap = a.cap;
-    
-    arrayCopy(items, a.items, a.cap);
+
 }
 
 template<class T>
@@ -60,7 +99,6 @@ ArrayList<T>::~ArrayList()
 template<class T>
 ArrayList<T>& ArrayList<T>::operator=(const ArrayList<T>& a)
 {
-
     if (this != &a)
     {
         T** newItems = new T*[a.cap];

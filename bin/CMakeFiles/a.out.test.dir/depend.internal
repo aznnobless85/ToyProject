@@ -20,6 +20,9 @@ CMakeFiles/a.out.test.dir/src/parsingUtil.cpp.o
  /home/ics45c/projects/hashit/src/parsingUtil.cpp
  /home/ics45c/projects/hashit/src/parsingUtil.h
 CMakeFiles/a.out.test.dir/test/TestHashMap.cpp.o
+ ../src/ArrayList.cpp
+ ../src/ArrayList.hpp
+ ../src/HashMap.hpp
  /home/ics45c/libs/gtest-1.7.0/include/gtest/gtest-death-test.h
  /home/ics45c/libs/gtest-1.7.0/include/gtest/gtest-message.h
  /home/ics45c/libs/gtest-1.7.0/include/gtest/gtest-param-test.h
